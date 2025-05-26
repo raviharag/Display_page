@@ -70,12 +70,14 @@
     }
 
     .compound-label {
-      display: flex;
-      justify-content: space-between;
-      font-size: 1.8em;
+      display: grid;
+      grid-template-columns: 1fr auto auto;
+      align-items: center;
+      font-size: 1.6em;
       font-weight: bold;
-      margin: 10px 0;
+      margin: 12px 0;
       color: #ffd700;
+      gap: 10px;
     }
 
     .total-weight, #timerDisplay {
@@ -115,10 +117,18 @@
   <div class="section small">MOULD NO: <strong id="mouldNo">--</strong></div>
 
   <div class="compound-box">
-    <div class="compound-label">INNER HEAL: <span id="innerHeal">--</span> kg</div>
-    <div class="compound-label">BEAD LAYER: <span id="beadLayer">--</span> kg</div>
-    <div class="compound-label">BONDING LAYER: <span id="bondLayer">--</span> kg</div>
-    <div class="compound-label">SOFT LAYER: <span id="softLayer">--</span> kg</div>
+    <div class="compound-label">
+      INNER HEAL: <span id="innerHeal">--</span> <span>kg</span>
+    </div>
+    <div class="compound-label">
+      BEAD LAYER: <span id="beadLayer">--</span> <span>kg</span>
+    </div>
+    <div class="compound-label">
+      BONDING LAYER: <span id="bondLayer">--</span> <span>kg</span>
+    </div>
+    <div class="compound-label">
+      SOFT LAYER: <span id="softLayer">--</span> <span>kg</span>
+    </div>
   </div>
 
   <div id="totalWeight" class="total-weight">TOTAL WEIGHT: -- kg</div>
